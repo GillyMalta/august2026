@@ -223,6 +223,10 @@ body {
     border-bottom: solid #dc0000 1px;
 }
 
+.introTextBox p {
+    color: #C2E2EE;
+}
+
 .my {
     color: #dc0000;
 }
