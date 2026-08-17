@@ -1,0 +1,59 @@
+#span_Container {
+    position: absolute;
+    top: 10dvh;
+    left: 10dvw;
+    display: flex;
+    width: 80dvw;
+    height: 80dvh;
+    justify-content: center;
+    border: solid lightgray 1px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    /* background-color: yellow; */
+}
+
+.card {
+    color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.card p {
+    cursor: pointer;
+    height: stretch;
+    width: 30rem;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: ease-in-out 5s;
+    border: solid lightgray 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card p img {
+    width: auto;
+    height: 90dvh;
+    border-radius: 8px;
+    /* mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 50%,
+            transparent 75%  
+        ); */
+}
+
+.card p span {
+    min-width: 13em;
+    text-align: center;
+    transition: all 2s;
+}
+
+.card p:hover {
+    flex: 15;
+}

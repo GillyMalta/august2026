@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Mogra&display=swap');
+
+/* ------------------------------------------------- */
+
+:root {
+
+        --margin_qtr:                       0.25rem;
+        --margin_half:                      0.5rem;
+
+        --font_Khand:                       Khand;
+
+        --primary_Colour:                   #C2E2EE;
+        --secondary_Colour:                 #649ECB;
+
+}
+
+/* ------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    transition: ease-in-out 1s;
+    font-family: var(--font_Khand);
+    font-weight: var(--number_200);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    overflow-x: hidden;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0;    
+
+}
+
+:is(h1,h2) {
+    background-image: url(../Images/landscape60.jpg);
+    background-clip: text;
+    color: transparent;
+    animation: motion 30s linear infinite;
+}
+
+/* ------------------------------------------------- */
+
+/* NAVIGATION */
+
+#leftNav {
+    position: fixed;
+    bottom: 6dvh;
+    left: 1dvw;
+    color: var(--primary_Colour);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    width: 3dvw;
+    padding: 0.25rem;
+}
+
+#leftNav a {
+    width: fit-content;
+}
+
+.icon {
+    height: auto;
+    width: 80%;
+    filter: invert(1);
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+}
+
+.svg {
+    height: auto;
+    width: 80%;
+    margin: 0;
+    padding: 0.5rem;
+    filter: brightness(0) saturate(100%)
+        invert(40%) sepia(93%)
+        saturate(1740%) hue-rotate(210deg)
+        brightness(92%) contrast(94%);
+}
+
+.icon:hover,
+.svg:hover {
+    transform: scale(1.25);
+}
+
+#rightNav {
+    position: fixed;
+    bottom: 6dvh;
+    right: 1dvw;
+    color: var(--primary_Colour);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 3dvw;
+    padding: 0.25rem;
+}
+
+/* #bottomtNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: var(--primary_Colour);
+    z-index: 999;
+    height: 4dvh;
+    width: -webkit-fill-available;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bottomLinks {
+    list-style: none;
+    text-decoration: none;
+    color: var(--primary_Colour);
+    font-weight: bold;
+}
+
+.bottomLinks:hover {
+    letter-spacing: 0.25rem;
+} */
+
+/* ------------------------------------------------- */
+
+/* TIME AND FILENAME */
+
+#dateTime {
+    /* position: fixed;
+    top: 3.1dvh;
+    right: 4dvw; */
+    color: #dc0000;
+    z-index: 900;
+    backdrop-filter: blur(1.0rem);
+    font-weight: bold;
+    width: 12dvw;
+    text-align: center;
+}
+
+#fileName {
+    position: absolute;
+    bottom: 4dvh;
+    right: 2dvw;
+    color: #dc0000;
+    font-size: 0.75rem;
+    backdrop-filter: blur(2.0rem);
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+}
+
+/* ------------------------------------------------- */
+
+/* INTRO SECTIONS */
+
+#firstIntro,
+#secondIntro,
+#thirdIntro {
+    position: relative;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+}
+
+#holder {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: black;
+}
+
+#slideshow {
+    height: 100dvh;
+    width: 100dvw;
+
+    mask-image: linear-gradient(
+        to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.6)
+        );
+}
+
+.introHeader {
+    position: absolute;
+    top: 1dvh;
+    left: 2dvw;
+    color: var(--primary_Colour);
+    font-size: 3.0rem;
+
+    animation: slideIn linear 3s;
+}
+
+.introTextBox {
+    position: absolute;
+    top: 25dvh;
+    color: var(--primary_Colour);
+    margin-left: 20dvw;
+    margin-right: 20dvw;
+    height: 50dvh;
+    width: -webkit-fill-available;
+    backdrop-filter: blur(1.0rem);
+    font-size: 1.5rem;
+    padding: 2.0rem;
+    font-style: italic;
+    text-align: justify;
+
+    animation: slideDown linear 3s;
+
+    border-bottom: solid #dc0000 1px;
+}
+
+.my {
+    color: #dc0000;
+}
+
+.dc0000 {
+    color: #dc0000;
+    font-weight: bolder;
+    font-size: 1.75rem;
+}
+
+.imageContainer {
+    background-color: black;
+}
+
+.background {
+    height: auto;
+    width: 100%;
+
+        mask-image: linear-gradient(
+        to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.6)
+        );
+}
+
+.myMoreAbove {
+    position: absolute;
+    z-index: 9999;
+    top: 10dvh;
+    right: 20dvw;
+    color: white;
+}
+
+.myMoreBelow {
+    position: absolute;
+    z-index: 9999;
+    bottom: 19vh;
+    right: 20dvw;
+}
+
+
+/* ------------------------------------------------- */
+
+/* MAIN */
+
+main {
+    position: relative;
+    height: auto;
+}
+
+[id*="Project"] {
+    height: 100dvh;
+    border-bottom: solid black 1px;
+
+    animation: slider linear;
+    animation-timeline: view();
+    animation-range:
+        entry 0%
+        cover 40%;
+
+        background-color: #649ECB;
+}
+
+.projectButtonsContainer {
+    position: absolute;
+    top: 12dvh;
+    left: 1dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20dvh;
+}
+
+.projectButton {
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    color: #dc0000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.projectButton:hover {
+    letter-spacing: 0.1rem;
+}
+
+/* ------------------------------------------------- */
+
+/* FAQ PROEJCT */
+
+#firstFaqProject {
+    position: relative;
+    overflow: hidden;
+}
+
+.faqDescription {
+    position: absolute;
+    top: 12dvh;
+    left: 3dvw;
+    color: white;
+}
+
+.faqTextBox {
+    position: absolute;
+    top: 17dvh;
+    height: 75dvh;
+    margin-left: 10dvw;
+    margin-right: 10dvw;
+    width: -webkit-fill-available;
+    border: solid white 1px;
+    display: flex;
+    /* grid-template-columns: repeat(3 ,1fr); */
+    padding: 0.25rem;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.faqColumn {
+    color: white;
+    text-align: center;
+    border: solid white 1px;
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+
+    animation: slideDown linear 3s;
+}
+
+.question {
+    color: var(--primary_Colour);
+    font-size: 1.25rem;
+}
+
+.arrow {
+    cursor: pointer;
+    transition: ease-in-out 3s;
+    color: #dc0000;
+}
+
+.answer {
+    display: none;
+    transition: ease-in-out 3s;
+    font-style: italic;
+}
+
+.moreAbove {
+    position: absolute;
+    z-index: 9999;
+    top: 20dvh;
+    right: 12dvw;
+    color: white;
+}
+
+.moreBelow {
+    position: absolute;
+    z-index: 9999;
+    bottom: 9vh;
+    right: 12dvw;
+}
+
+.faqLink {
+    list-style: none;
+    text-decoration: none;
+    color: #dc0000;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.faqLink:hover {
+    letter-spacing: 0.25rem;
+}
+
+/* ------------------------------------------------- */
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+}
+
+.footerGridContainer {
+    position: absolute;
+    top: 12dvh;
+    margin-left: 6dvw;
+    margin-right: 6dvw;
+    /* border: solid white 1px; */
+    height: 80dvh;
+    width: -webkit-fill-available;
+    color: white;
+    padding: 0.25rem;
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+#leftSide {
+    height: 100dvh;
+}
+
+.socialHolder {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    border: solid lightgrey 1px;
+    height: 80dvh;
+    margin-right: 0.25rem;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+
+.socialHeading {
+    font-size: 2.0rem;
+    color: var(--primary_Colour);
+}
+
+.socialImage {
+    height: auto;
+    width: 100%;
+}
+
+.socialImage:hover {
+    transform: scale(1.15);
+    filter: drop-shadow( 0 4px 4px green);
+}
+
+/* ------------------------------------------------- */
+
+/* COPYRIGHT */
+
+.copyright {
+    color: #dc0000;
+    font-weight: bold;
+    /* letter-spacing: 0.1rem; */
+}
+
+.copyright:hover {
+    letter-spacing: 0.25rem;
+}
+
+.bottomLinks {
+    list-style: none;
+    text-decoration: none;
+    color: #dc0000;
+    font-weight: bold;
+}
+
+#disclaimer {
+    position: relative;
+    height: 100dvh;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-left: 20dvw;
+    margin-right: 20dvw;
+}

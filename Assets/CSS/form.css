@@ -1,0 +1,162 @@
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: -webkit-fill-available;
+    padding: 0.25rem;
+    border-left: solid black 1px;
+}
+
+[id*="Section"] {
+    border: solid black 1px;
+    position: relative;
+    padding: 0.5rem;
+    height: 6dvh;
+    width: 88%;
+    border-radius: 1.0rem;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    position: absolute;
+    top: -1.0rem;
+    left: 1dvw;
+    backdrop-filter: blur(1.0rem);
+    padding: 0.25rem;
+    border-radius: 1.0rem;
+    width: 25dvw;
+}
+
+input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4dvh;
+    width: 90%;
+    border-radius: 1.0rem;
+    background-color: transparent;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    color: white;
+}
+
+#country {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6dvh;
+    width: 8dvw;
+    font-size: 1.0rem;
+    border-radius: 1.0rem;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+}
+
+#phone {
+    position: absolute;
+    bottom: 0;
+    left: 16dvh;
+    width: 80%;
+}
+
+#category {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6dvh;
+    width: 100%;
+    border-radius: 1.0rem;
+    background-color: transparent;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    color: white;
+}
+
+option {
+    background-color: darkgrey;
+}
+
+#commentSection {
+    height: 12dvh;
+}
+
+textarea {
+    position: absolute;
+    height: 12dvh;
+    bottom: 0;
+    left: 0;
+    width: 99%;
+    border-radius: 1.0rem;
+    background-color: transparent;
+    color: white;
+}
+
+#buttonsHolder {
+    height: 14dvh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttuni {
+    width: 24dvw;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2.0rem;
+}
+
+.buttuni:hover {
+    letter-spacing: 0.25rem;
+}
+
+[id^="invalid"] {
+    position: absolute;
+    bottom: 0;
+    right: 1dvw;
+}
+
+input,
+input:active,
+input:focus,
+#country,
+#country:focus,
+#country:active,
+.mobile,
+.mobile:focus,
+.mobile:active,
+#category,
+#category:focus,
+#category:active,
+textarea,
+textarea:active,
+textarea:focus {
+    outline: none;
+    border: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+.required {
+    color: #dc0000;
+    font-weight: bold;
+}
+
+.formBackground {
+    height: auto;
+    width: 100%;
+
+        /* mask-image: linear-gradient(
+        to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.9)
+        ); */
+}

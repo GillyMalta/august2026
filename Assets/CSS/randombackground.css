@@ -1,0 +1,22 @@
+#holder {
+    background-color: black;
+    height: 100dvh;
+    width: 100dvw;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.carousel {
+    position: absolute;
+    height: 100dvh;
+    width: 100dvw;
+
+    background-color: black;
+
+        mask-image: linear-gradient(
+        to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.6)
+        );
+
+}

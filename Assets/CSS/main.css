@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Mogra&display=swap');
+
+/* ------------------------------------------------- */
+
+:root {
+
+        --margin_qtr:                       0.25rem;
+        --margin_half:                      0.5rem;
+
+        --font_Khand:                       Khand;
+
+        --primary_Colour:                   #C2E2EE;
+        --secondary_Colour:                 #649ECB;
+
+}
+
+/* ------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    transition: ease-in-out 1s;
+    font-family: var(--font_Khand);
+    font-weight: var(--number_200);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--primary_Colour);
+    overflow-x: hidden;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0;    
+}
+
+/* ------------------------------------------------- */
+
+/* TIME */
+
+
+
+/* ------------------------------------------------- */
+
+/* NAVIGATION */
+
+#leftNav {
+    position: fixed;
+    bottom: 5dvh;
+    left: 1dvw;
+    color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    width: 3dvw;
+    padding: 0.25rem;
+}
+
+#leftNav a {
+    width: fit-content;
+}
+
+.icon {
+    height: auto;
+    width: 80%;
+    filter: invert(1);
+    margin: 0;
+    padding: 0;
+}
+
+.icon:hover {
+    transform: scale(1.25);
+    filter: drop-shadow(0 4px 4px purple) invert(1);
+}
+
+#rightNav {
+    position: fixed;
+    bottom: 5dvh;
+    right: 1dvw;
+    color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 3dvw;
+    padding: 0.25rem;
+}
+
+#bottomtNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: white;
+    z-index: 999;
+    height: 4dvh;
+    width: -webkit-fill-available;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bottomLinks {
+    list-style: none;
+    text-decoration: none;
+    color: var(--primary_Colour);
+    font-weight: bold;
+}
+
+.bottomLinks:hover {
+    letter-spacing: 0.25rem;
+}
+
+/* ------------------------------------------------- */
+
+/* HEADER */
+
+header {
+    /* position: relative; */
+    height: auto;
+    width: 100dvw;
+}
+
+[id^="section"] {
+    /* position: relative; */
+
+    animation: slider linear;
+    animation-timeline: view();
+    animation-range:
+        entry 0%
+        cover 40%;
+
+}
+
+/* ------------------------------------------------- */
+
+/* COMMONS */
+
+.imageContainer {
+    position: relative;
+    top: 0;
+    height: 100dvh;
+    width: 100dvw;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: black;
+}
+
+.background {
+    height: auto;
+    width: 100%;
+
+    mask-image: linear-gradient(
+        to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.6)
+        );
+}
+
+#fileName {
+    position: absolute;
+    bottom: 4dvh;
+    right: 2dvw;
+    color: #dc0000;
+    font-size: 0.75rem;
+    backdrop-filter: blur(2.0rem);
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+}
+
+.heading {
+    position: absolute;
+    top: 1dvh;
+    left: 1dvw;
+    color: var(--primary_Colour);
+    font-size: 3.0rem;
+
+        animation: slideIn linear 3s;
+}
+
+.headerTextBox {
+    position: absolute;
+    backdrop-filter: blur(1.0rem);
+    margin-left: 20dvw;
+    margin-right: 20dvw;
+    height: auto;
+    width: -webkit-fill-available;
+    top: 20dvh;
+    color: white;
+    font-size: 1.75rem;
+    text-align: justify;
+    font-style: italic;
+    padding: 1.0rem;
+
+            animation: slideDown linear 3s;
+
+}
+
+/* .columnsContainer {
+    position: absolute;
+    top: 20dvh;
+    height: 50dvh;
+    width: -webkit-fill-available;
+    margin-left: 10dvw;
+    margin-right: 10dvw;
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 4dvw;
+}
+
+.column {
+    backdrop-filter: blur(1.0rem);
+    border: solid white 1px;
+    text-align: center;
+    color: var(--primary_Colour);
+    box-shadow: 0 10px 10px orange;
+    padding: 0.5rem;
+    height: 68dvh;
+
+        animation: slideDown linear 3s;
+
+}
+
+.column:hover {
+    box-shadow: none;
+}
+
+.columnHeader {
+    font-weight: bold;
+}
+
+.columnTextBox {
+    text-align: justify;
+    letter-spacing: 0.1rem;
+    font-size: 1.0rem;
+}
+
+.textBox {
+    position: absolute;
+    margin-left: 10dvw;
+    margin-right: 10dvw;
+    top: 10dvh;
+    left: 0;
+    color: var(--primary_Colour);
+
+        animation: slideDown linear 3s;
+} */
+
+/* ------------------------------------------------- */
+
+/* CLASSES */
+
+.hundred {
+    height: 100dvh;
+    width: 100dvw;
+    border-bottom: solid black 1px;
+}
+
+/* ------------------------------------------------- */
+

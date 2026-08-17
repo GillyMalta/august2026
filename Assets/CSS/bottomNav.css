@@ -1,0 +1,97 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Mogra&display=swap');
+
+:root {
+
+        --margin_qtr:                       0.25rem;
+        --margin_half:                      0.5rem;
+
+        --font_Khand:                       Khand;
+
+        --primary_Colour:                   #C2E2EE;
+        --secondary_Colour:                 #649ECB;
+
+} */
+
+#bottomNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: var(--primary_Colour);
+    z-index: 999;
+    height: 4dvh;
+    width: -webkit-fill-available;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* .bottomLinks {
+    list-style: none;
+    text-decoration: none;
+    color: var(--primary_Colour);
+    font-weight: bold;
+} */
+
+/* .bottomLinks:hover {
+    letter-spacing: 0.25rem;
+} */
+
+/* DROP DOWN MENU CONTROLS */
+
+.bottomdropdown {
+    padding-top: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.bottomdropbtn {
+    font-family: 'Khand';
+    background: inherit;
+    color: royalblue;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    width: clamp(120px, 20vw, 220px);
+    text-align: right;
+    margin-right: 1.0rem;
+}
+
+.bottomdropdowncontent {
+    position: absolute;
+    bottom: 4dvh;
+    right: 1dvw;
+    backdrop-filter: blur(2.5rem);
+    width: clamp(10.0rem, 1.0rem, 5.0rem);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+    /* visibility: hidden; */
+    visibility: visible;
+    transition: ease-in-out 1s;
+}
+
+.bottomdropdowncontent a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #C2E2EE;
+    font-size: 1.0rem;
+    font-weight: 400;
+}
+
+.bottomdropdowncontent a:hover {
+    background-color: inherit;
+    transition: ease-in-out 1s;
+}
+
+.bottomdropdown:hover .bottomdropdowncontent {
+    opacity: 1;
+    /* visibility: visible; */
+    visibility: visible;
+}
+
