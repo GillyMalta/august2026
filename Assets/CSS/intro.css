@@ -207,7 +207,7 @@ body {
 .introTextBox {
     position: absolute;
     top: 25dvh;
-    color: var(--primary_Colour);
+    color: #C2E2EE;
     margin-left: 20dvw;
     margin-right: 20dvw;
     height: 50dvh;
